@@ -3,9 +3,9 @@
 CC = gcc
 
 SRC = my_putchar.c \
-    my_putstr.c \
-    my_strcpy.c \
-    my_strlen.c \
+	my_putstr.c \
+	my_strcpy.c \
+	my_strlen.c \
 
 
 
@@ -18,17 +18,17 @@ MYH = my.h
 all: $(NAME)
 
 $(NAME): $(OBJ)
-    cp $(MYH) ../../include/
-    ar rc $(NAME) $(OBJ)
-    rm -f *.o
+	cp $(MYH) ../../include/
+	ar rc $(NAME) $(OBJ)
+	rm -f *.o
 
-    
+	
 
 clean : 
-        rm -f $(OBJ)
+		rm -f $(OBJ)
 
 fclean: clean
-        rm -f $(NAME)
+		rm -f $(NAME)
 
 re: fclean all
 
